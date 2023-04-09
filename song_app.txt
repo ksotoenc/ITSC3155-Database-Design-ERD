@@ -1,0 +1,7 @@
+In v2, users will be able to create multiple playlists instead of just one.
+
+Users will have multiple account types, each with different privileges (the product team is still working on what the types are, but right now it seems like "free", "standard", and "premium" are likely options).
+
+-----
+
+The relationship between 'user' and 'playlists' will be 'many-to-many' instead of 'many-to-one' in this new version of the app. To account for this, we'd need to edit the playlist table to have both user_id and playlist_id as a composite primary key. Additionally, we must add a 'membership' attribute to the users table that will determine whether a user's 'free', 'standard', or 'premium'.
